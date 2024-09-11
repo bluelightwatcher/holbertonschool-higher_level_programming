@@ -1,5 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
-my_list = ["this is a list"]
-
-print("{:d}".format(my_list)
+def raise_exception():
+    raise TypeError
