@@ -28,7 +28,7 @@ class Square:
 
         self.__size = size
 
-    @square
+
     def area(self):
         """
         Determines the area of a square.
@@ -36,4 +36,4 @@ class Square:
         Returns:
             int: The size of a square depending on the size
         """
-        return (self.__size * self.__size)
+        return self.__size * self.__size
