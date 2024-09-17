@@ -72,4 +72,4 @@ class Square:
             print()
         else:
             for _ in range(self.__size):
-                print("#" * self__size)
+                print("#" * self.__size)
