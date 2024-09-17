@@ -8,7 +8,7 @@ class Square:
     """
     This is a square class.
     """
-    def __init__(self, size)
+    def __init__(self, size):
     """
     Creating instances of a square with one parameter.
 
