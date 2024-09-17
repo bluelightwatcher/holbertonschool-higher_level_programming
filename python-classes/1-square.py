@@ -9,10 +9,11 @@ class Square:
     This is a square class.
     """
     def __init__(self, size):
-    """
-    Creating instances of a square with one parameter.
+         """
+         Creating instances of a square with one parameter.
 
-        Args:
-            size: will be the size of the square
-        """
-    self.__size = size
+         Args:
+         size: will be the size of the square
+         """
+
+         self.__size = size
