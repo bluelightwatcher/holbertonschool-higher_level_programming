@@ -98,7 +98,7 @@ class Rectangle:
             for _ in range(self._height):
                 shape.append("#" * self._width)
             return "\n".join(shape)
-            
+
     def __print__(self):
         for _ in range(self._height):
             print("#" * self._width)
