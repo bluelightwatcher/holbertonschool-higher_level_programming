@@ -13,6 +13,6 @@ class Mylist(list):
 
     def __init__(self):
         super().__init__(self)
+        self.sort()
 
-        sort(Mylist)
-        print(Mylist)   
+        print(self)   
