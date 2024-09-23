@@ -4,8 +4,8 @@
 class Mylist(list):
     """ This class is a child of the list class
 
-    Attribute: 
-        list: is the parent class
+    Attributes: 
+        none
     """
 
     def __init__(self):
