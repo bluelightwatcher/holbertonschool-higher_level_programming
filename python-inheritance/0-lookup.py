@@ -1,4 +1,4 @@
-# /usr/bin/python3
+#!/usr/bin/python3
 """This module prints all attributes of a class in a list"""
 
 
