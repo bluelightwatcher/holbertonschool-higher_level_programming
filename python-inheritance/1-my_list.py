@@ -2,7 +2,7 @@
 """ This modules sorts a list"""
 
 
-class Mylist(list):
+class MyList(list):
     """ This class is a child of the list class
 
     Methods:
