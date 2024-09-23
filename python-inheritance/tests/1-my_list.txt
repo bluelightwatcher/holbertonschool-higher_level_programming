@@ -2,3 +2,7 @@ Prints a list of non negative number in order:
 ... 
 ...print_sorted([5, 7, 8, 3, 10])
 ...[3, 5, 7, 8, 10]
+
+Prints a sorted list with negative number:
+...     print_sorted([5, 7, 8, -3, 10])
+...     [-3, 5, 7, 8, 10]
