@@ -4,14 +4,18 @@
 class Mylist(list):
     """ This class is a child of the list class
 
-    Args: 
+    Attribute: 
         list: is the parent class
-
-    Returns:
-        A sorted list
     """
 
     def __init__(self):
+        """ Function sorts a list
+
+        args:
+            none
+        Returns:
+            sorted list
+        """
         super().__init__(self)
         self.sort()
 
