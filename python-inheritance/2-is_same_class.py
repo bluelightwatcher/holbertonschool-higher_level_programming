@@ -4,7 +4,6 @@
 
 def is_same_class(obj, a_class):
 
-
     """
     Function uses eq magic method
 
@@ -18,4 +17,4 @@ def is_same_class(obj, a_class):
         Returns:
             boolean
     """
-    return type(obj) == a_class
+    return type(obj) is a_class
