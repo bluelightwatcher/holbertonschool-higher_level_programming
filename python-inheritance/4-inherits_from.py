@@ -3,7 +3,6 @@
 
 
 def inherits_from(obj, a_class):
-
     """
     Function uses eq magic method
 
@@ -17,7 +16,7 @@ def inherits_from(obj, a_class):
         Returns:
             boolean
     """
-    if isinstance(obj, a_class) and type(obj) is not a_class: 
+    if isinstance(obj, a_class) and not isinstance(obj, a_class):
         return True
     else:
         return False
