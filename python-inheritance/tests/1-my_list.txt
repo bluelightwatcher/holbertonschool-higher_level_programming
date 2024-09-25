@@ -1,7 +1,7 @@
 # Test Case 1: A list of non-negative numbers should be sorted
->>> def print_sorted([5, 7, 8, 3, 10]):
+>>> def print_sorted(5, 7, 8, 3, 10):
 [3, 5, 7, 8, 10]
 
 # Test Case 2: A list with negative numbers should also be sorted
->>> def print_sorted([5, 7, 8, -3, 10])
+>>> def print_sorted(5, 7, 8, -3, 10)
 [-3, 5, 7, 8, 10]
