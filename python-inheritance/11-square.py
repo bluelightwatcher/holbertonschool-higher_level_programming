@@ -68,5 +68,5 @@ class Square(Rectangle):
     def area(self):
         return self._size * self._size
 
-    def __print__(self):
+    def __str__(self):
         message = f"[{self.__class__.name__}] {self._size}/{self._size}"
