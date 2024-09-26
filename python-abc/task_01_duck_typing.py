@@ -33,10 +33,14 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
+        """prints area of a circle
+        """
         self.area = 3.14159 * (self.radius ** 2)
         print(f"Area : {self.area}")
 
     def perimeter(self):
+        """prints perimeter of a circle
+        """
         self.perimeter = 2 * 3.14159 * self.radius
         print(f"Perimeter : {self.perimeter}")
 
@@ -54,14 +58,21 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
+        """prints area of a rectangle
+        """
         self.area = self.width * self.height
         print(f"Area : {self.area}")
 
     def perimeter(self):
+        """prints perimeter of a rectangle
+        """
         self.perimeter = (self.width * 2) + (self.height * 2)
         print(f"Perimeter : {self.perimeter}")
 
 
 def shape_info(Shape):
+    """method calls area and perimeter method
+    relies on duck typing
+    """
     Shape.area()
     Shape.perimeter()
