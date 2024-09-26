@@ -24,12 +24,21 @@ class Shape(ABC):
 class Circle(Shape):
     """Subclass of Shape
 
+    Attribute:
+        radius: is the radius of the circle
+
     Method:
        area: is the area of a circle
        perimeter: is the perimeter of a circle
     """
 
     def __init__(self, radius):
+        """
+        Initialize a circle instance
+
+        Args:
+            radius: radius of the circle
+        """
         self.radius = radius
 
     def area(self):
@@ -48,12 +57,24 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Subclass of Shape
 
+    Attribute:
+        width: is the width of the rectangle
+        height: is the height of the rectangle
+
     Method:
        area: is the area of a rectangle
        perimeter: is the perimeter of a rectangle
     """
 
     def __init__(self, width, height):
+        """
+        creates an instance of a rectangle
+
+        Args:
+            width: is the rectangle width
+            height: is the rectangle height
+        """
+
         self.width = width
         self.height = height
 
@@ -70,9 +91,13 @@ class Rectangle(Shape):
         print(f"Perimeter : {self.perimeter}")
 
 
-def shape_info(Shape):
+def shape_info(Shape_obj):
     """method calls area and perimeter method
     relies on duck typing
+
+    Args:
+        Shape_obj (Shape): is an instance of an object derived of Shape
+
     """
-    Shape.area()
-    Shape.perimeter()
+    Shape_obj.area()
+    Shape_obj.perimeter()
