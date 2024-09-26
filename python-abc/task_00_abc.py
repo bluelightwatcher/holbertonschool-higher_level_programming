@@ -12,7 +12,7 @@ class Animal(ABC):
     """
 
     @abstractmethod
-    def soundi(self):
+    def sound(self):
         pass
 
 
