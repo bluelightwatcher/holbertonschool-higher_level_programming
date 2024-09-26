@@ -128,3 +128,6 @@ class Rectangle(Shape):
         print(f"Perimeter: {perimeter_value}")
         return perimeter_value
 
+def shape_info(self):
+    self.area()
+    self.perimeter()
