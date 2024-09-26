@@ -4,7 +4,7 @@
 class VerboseList(list):
     """ is a subclass of list"""
 
-    def __init__(self, args):
+    def __init__(self, args=None):
         """creates an instance of VerboseList
         """
         super().__init__(args)
