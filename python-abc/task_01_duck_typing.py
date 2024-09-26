@@ -4,6 +4,7 @@ Circle and Rectangle. Each shape class implements methods to calculate
 area and perimeter, providing a structure for polymorphic behavior.
 """
 
+from math import pi
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
@@ -68,7 +69,7 @@ class Circle(Shape):
             float: The area of the circle, calculated using the formula 
             π * radius^2.
         """
-        area_value = 3.14159 * (self.radius ** 2)
+        area_value = pi * (self.radius ** 2)
         print(f"Area: {area_value:.14f}")
         return area_value
 
@@ -79,7 +80,7 @@ class Circle(Shape):
             float: The perimeter of the circle, calculated using the formula 
             2 * π * radius.
         """
-        perimeter_value = 2 * 3.14159 * self.radius
+        perimeter_value = 2 * pi * self.radius
         print(f"Perimeter: {perimeter_value:.14f}")
         return perimeter_value
 
