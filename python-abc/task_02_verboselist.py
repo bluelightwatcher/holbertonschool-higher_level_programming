@@ -7,7 +7,10 @@ class VerboseList(list):
     def __init__(self, args=None):
         """creates an instance of VerboseList
         """
-        super().__init__(args)
+        if args is None:
+            super().__init__()
+        else:
+            super().__init__(args)
 
     def append(self, item):
         """
