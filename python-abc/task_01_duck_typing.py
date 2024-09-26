@@ -69,7 +69,7 @@ class Circle(Shape):
             π * radius^2.
         """
         area_value = 3.14159 * (self.radius ** 2)
-        print(f"Area: {area_value}")
+        print(f"Area: {area_value:.14f}")
         return area_value
 
     def perimeter(self):
@@ -80,7 +80,7 @@ class Circle(Shape):
             2 * π * radius.
         """
         perimeter_value = 2 * 3.14159 * self.radius
-        print(f"Perimeter: {perimeter_value}")
+        print(f"Perimeter: {perimeter_value:.14f}")
         return perimeter_value
 
 
