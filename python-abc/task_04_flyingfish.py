@@ -42,7 +42,7 @@ class Bird():
         print("The bird lives in the sky")
 
 
-class FlyingFish(Fish, Bird):
+class FlyingFish(Bird, Fish):
     """
     Classes override the methods inherited from the parent classes
 
