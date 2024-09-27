@@ -56,7 +56,7 @@ class FlyingFish(Bird, Fish):
     def fly(self):
         """overridesthe fly method"""
 
-        print("The FlyingFish is soaring")
+        print("The FlyingFish is soaring!")
 
     def swim(self):
         """override the swim method"""
