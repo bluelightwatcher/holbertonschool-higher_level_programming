@@ -18,7 +18,7 @@ class MyList(list):
         Does not modify the original list.
         """
 
-        if len(self) == 0
+        if len(self) == 0:
             print([])
         else:
             print(sorted(self))
