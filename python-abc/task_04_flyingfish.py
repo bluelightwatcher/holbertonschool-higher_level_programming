@@ -1,5 +1,6 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """This module explores multiple inheritances."""
+
 
 class Fish():
     """Parent class
@@ -40,6 +41,7 @@ class Bird():
 
         print("The bird lives in the sky")
 
+
 class FlyingFish(Fish, Bird):
     """
     Classes override the methods inherited from the parent classes
@@ -55,7 +57,7 @@ class FlyingFish(Fish, Bird):
         """overridesthe fly method"""
 
         print("The FlyingFish is soaring")
-    
+
     def swim(self):
         """override the swim method"""
 
