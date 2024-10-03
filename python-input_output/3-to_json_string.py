@@ -1,14 +1,14 @@
 #!/usr/bin/python3
+"""Module returns the json repr of an obj."""
 import json
-"""module returns the json repr of a string"""
 
 
 def to_json_string(my_obj):
-    """function returns type of a json object
+    """Return type of a json object.
 
     Args:
         my_obj
     Return:
-        my_obj: type of obj
+        str: type of obj
     """
     return json.dumps(my_obj) 
