@@ -11,5 +11,5 @@ def from_json_string(my_str):
     Return:
         my_strJSON
     """
-    my_strJSON = json.loads(my_str)
+    my_strJSON = json.load(my_str)
     return (my_strJSON)
