@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+"""Module serialize from json to python."""
 import json
-"""module convert from json to python"""
 
 
 def from_json_string(my_str):
-    """function returns a python object
+    """Return a python object.
 
     Args:
-        my_str
+        json: my_str
     Return:
-        my_strJSON
+        str: my_strJSON
     """
     my_strJSON = json.load(my_str)
     return (my_strJSON)
