@@ -1,10 +1,12 @@
+#!/usr/bin/bash
+"""Module serializes and deserializes an object using pickle module"""
 import pickle
+
 
 class CustomObject:
     def __init__(self, name, age, is_student):
         """
         Initialize the CustomObject with name, age, and is_student attributes.
-        
         Parameters:
         name (str): The name of the person.
         age (int): The age of the person.
