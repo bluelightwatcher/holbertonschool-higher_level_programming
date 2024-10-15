@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 
 import http.server
+from http.server import BaseHTTPRequestHandler
 import socketserver
 import requests
 import json
 
-PORT = 8000
-Handler = http.server.SimpleHTTPRequestHandler
- 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-     print("serving at port", PORT)
-     httpd.serve_forever()
 
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -24,7 +19,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!")
 
-        elif self.path =="/data":
+        elif self.path == "/data":
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
@@ -40,3 +35,11 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         else:
             self.send_response(404)
             self.end_headers()
+
+
+PORT = 8000
+Handler = SimpleHTTPRequestHandler
+ 
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+     print("serving at port", PORT)
+     httpd.serve_forever()
