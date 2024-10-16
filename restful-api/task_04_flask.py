@@ -20,18 +20,18 @@ def home():
 
 @app.route("/data")
 def showdata():
-    return jsonify({"usernames": list(users.keys())})
+    return jsonify(users)
 
 
 @app.route("/status")
 def status():
-    return jsonify(message="OK"), 200
+    return jsonify("OK"), 200
 
 
 @app.route("/users/<username>")
 def get_user(username):
     if username in users:
-        return jsonify({"users": [username]})
+        return jsonify(users[username])
     else:
         return jsonify({"Error": "user not found"}), 404
 
