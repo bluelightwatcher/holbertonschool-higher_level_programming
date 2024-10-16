@@ -45,6 +45,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
             self.wfile.write(json.dumps(data).encode("utf-8"))
 
+        elif self.path == "/status":
+            return OK
+
         else:
             self.send_response(404)
             self.end_headers()
