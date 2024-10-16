@@ -55,7 +55,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"404 Not Found: this endpoint is not valid")
+            self.wfile.write(b"404 Not Found")
 
 
 PORT = 8000
