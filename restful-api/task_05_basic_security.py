@@ -55,7 +55,7 @@ def admin_only():
         return jsonify({"error": "Admin access required"}), 403
     return jsonify({"message": "Admin Access: Granted"})
 
-""" Custom error handlers for JWT
+"""Custom error handlers for JWT"""
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
     return jsonify({"error": "Missing or invalid token"}), 401
@@ -71,7 +71,7 @@ def handle_expired_token_error(err):
 @jwt.revoked_token_loader
 def handle_revoked_token_error(err):
     return jsonify({"error": "Token has been revoked"}), 401
-"""
+
 # Run the app
 if __name__ == '__main__':
     app.run()
