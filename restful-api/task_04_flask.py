@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/venv python3
 """module creates a simple API"""
 
 from flask import Flask
@@ -15,7 +15,7 @@ def home():
 
 @app.route("/data")
 def showdata():
-    return jsonify(users)
+    return jsonify(list(users.keys()))
 
 
 @app.route("/status")
@@ -28,7 +28,7 @@ def get_user(username):
     if username in users:
         return jsonify(users[username])
     else:
-        return jsonify({"Error": "user not found"}), 404
+        return jsonify({"error": "User not found"}), 404
 
 
 @app.route("/add_user", methods=["POST"])
