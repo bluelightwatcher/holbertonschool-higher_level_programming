@@ -1,6 +1,6 @@
--- Using group by to return count in desc order
-SELECT name, COUNT(name) AS prenom 
+-- Using group by and order by and NOT NULL statement
+SELECT score, name
 FROM second_table
 WHERE name IS NOT NULL
-GROUP BY name 
-ORDER BY prenom DESC;
+GROUP BY score, name
+ORDER BY name ASC;
