@@ -1,42 +1,29 @@
 #!/usr/bin/python3
-
-"""This module queries data from database.
-
-Uses MySQLdb to write sql query.
-Uses the sys module to gather data from the CLI.
-"""
-
+"""cript that lists all states from the database hbtn_0e_0_usa"""
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    """ Using sys module"""
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
 
-    """Database settings"""
+    """Connect to MySQL database using command-line arguments:
+        user, password, database name"""
+
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=database
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
     )
 
-    """implementing cursor"""
+    # Create a cursor to execute queries
     cursor = db.cursor()
-
-    """ Execute SQL query in SQL"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-    """ retrieving all rows with cursor"""
+    # Fetch all query results
     rows = cursor.fetchall()
-
-    """printing the row""" 
     for row in rows:
         print(row)
 
-    """ closing cursor and database"""
     cursor.close()
     db.close()
