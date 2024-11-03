@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-""" This module uses MySQLdb to write sql query
-using the sys module to gather data from the CLI
+
+"""This module queries data from database.
+
+Uses MySQLdb to write sql query.
+Uses the sys module to gather data from the CLI.
 """
+
 import MySQLdb
 import sys
 
