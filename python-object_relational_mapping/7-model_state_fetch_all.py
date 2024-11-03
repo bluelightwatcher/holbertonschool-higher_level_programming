@@ -1,35 +1,32 @@
-# 7-model_state_fetch_all.py
-import sys
-from model_state import Base, State
+#!/usr/bin/python3
+"""
+Lists all State objects from the database hbtn_0e_6_usa,
+sorted by ascending id.
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+import sys
 
-if __name__ == "__main__":
-    # Check that the correct number of arguments is provided
-    if len(sys.argv) != 4:
-        print("Usage: ./7-model_state_fetch_all.py <mysql username> <mysql password> <database name>")
-        sys.exit(1)
 
-    # Get the command line arguments
-    mysql_user = sys.argv[1]
+if __name__ == '__main__':
+
+    mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
 
-    # Create the engine
-    engine = create_engine(f'mysql+mysqldb://{mysql_user}:{mysql_password}@localhost/{database_name}', pool_pre_ping=True)
+    # Establish a connection to the MySQL database
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        mysql_username, mysql_password, database_name), pool_pre_ping=True)
 
-    # Create a configured "Session" class
     Session = sessionmaker(bind=engine)
-
-    # Create a session
     session = Session()
 
-    # Query all State objects sorted by states.id
+    """Query all State objects from the database,
+    ordered by id in ascending order"""
     states = session.query(State).order_by(State.id).all()
 
-    # Print the results
     for state in states:
         print(f"{state.id}: {state.name}")
 
-    # Close the session
     session.close()
